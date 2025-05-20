@@ -1,0 +1,45 @@
+@if(cargando){
+    <app-loader></app-loader>
+}
+@if(!cargando){
+<section>
+    <div class="fila row">
+        @for(pez of peces; track peces){
+            <div class="columnas col-lg-4 col-md-12 col-sm-12">
+                <div class="enlace">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="100"
+                    >
+                      <div style="
+                  width: 489px;
+                  z-index: 1;
+                ">
+                      <img
+                      [src]="pez.urlimagen"
+                      alt="{{pez.nombrecomun}}"
+                      class="imagen-pez"
+                      (error)="onImageError($event)"
+                    >
+                    
+                
+                      </div>
+                      <div class="contenido-texto">
+                          <div class="nombres">
+                              <div class="nombre-comun">
+                                  <p>{{pez.nombrecomun}}</p>
+                              </div>
+                              <div class="nombre-cientifico">
+                                  <p>{{pez.nombrecientifico}}</p>
+                              </div>
+                          </div>
+                          <div class="origen">
+                              <p class="">{{pez.origen}}</p>
+                              <button (click)="verInfoPez(pez.id)" class="ver-mas">Ver Más</button>
+                          </div>
+                      </div>
+                      
+                  </div></div>
+            </div>
+        }
+    </div>
+</section>
+}

@@ -1,0 +1,47 @@
+
+<section>
+    @if(pez) {
+        <main class="container">
+            <div class="fish-container">
+                <div class="fish-header">
+                    <img  id="urlimagen"
+                          [src]="pez.urlimagen"
+                          alt="{{pez.nombrecomun}}"
+                          class="fish-image"
+                          (error)="onImageError($event)"
+                        >
+                    <h1 class="fish-title" id="nombrecomun">{{pez.nombrecomun}}</h1>
+                    <p class="fish-scientific" id="nombrecientifico">{{pez.nombrecientifico}}</p>
+                </div>
+                
+                <div class="fish-content">
+                    
+                    <div class="fish-section">
+                        <h3>Descripción</h3>
+                        <p id="descripcion">{{pez.descripcion}}</p>
+                    </div>
+                    
+                    <div class="fish-section">
+                        <h3>Distribución</h3>
+                        <p id="distribucion">{{pez.distribucion}}</p>
+                    </div>
+                    
+                    <div class="fish-section">
+                        <h3>Origen</h3>
+                        <p id="origen">{{pez.origen}}</p>
+                    </div>
+                    
+                    <div class="fish-section">
+                        <h3>Taxonomía</h3>
+                        <p id="taxonomia">{{pez.taxonomia}}</p>
+                    </div>
+                    
+                    <div class="fish-section">
+                        <h3>Biología y Ecología</h3>
+                        <p id="biologiaencologia">{{pez.biologiaecologia}}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    }  
+</section>

@@ -1,0 +1,47 @@
+.padre-mapa {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 400px;
+    margin-top: 4%;
+}
+
+p {
+    font-size: 14px;
+    font-weight: bold;
+}
+google-map {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+:host ::ng-deep .map-container {
+    height: 100px !important;
+    width: 180px !important;
+    border-radius: 0.7rem !important;
+    overflow: hidden !important;
+  }
+
+
+@media (min-width: 389px) and (max-width: 575px) {
+  :host ::ng-deep .map-container {
+    height: 80px !important;
+    width: 150px !important;
+    border-radius: 0.5rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+}
+
+@media(max-width: 767px) {
+    #map {
+        width: 90%;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    #map {
+        width: 90%;
+    }
+}

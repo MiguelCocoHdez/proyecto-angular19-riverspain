@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand nav-item" href="../index.html">
+        <img src="img/logo-azul-claro.png" class="logoHeader" />
+      </a>
+      <!-- Eliminar atributos de toggler de la imagen -->
+      <img src="img/logotipo-azul-claro.png" class="logotipo" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/explorar-peces']" (click)="closeMenu()">Explorar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#custodiar-zona" (click)="closeMenu()">Custodiar Zona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#donaciones" (click)="closeMenu()">Donaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/loginRegister']" (click)="closeMenu()">Perfil</a>
+          </li>
+        </ul>
+        <div class="divVoluntario align-content-center">
+          <a class="botonVoluntario" id="botonNavegador" href="#formulario-voluntarios" (click)="closeMenu()">{{contenidoBoton}}</a>
+        </div>
+      </div>
+    </div>
+  </nav>

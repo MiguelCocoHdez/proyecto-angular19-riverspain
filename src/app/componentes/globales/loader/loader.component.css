@@ -1,0 +1,132 @@
+.loader {
+  position: relative;
+}
+
+.loader span {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+  letter-spacing: 5px;
+}
+
+.loader span:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.3px #65ade8;
+}
+
+.loader span:nth-child(2) {
+  color: #65ade8;
+  -webkit-text-stroke: 1px #65ade8;
+  animation: uiverse723 3s ease-in-out infinite;
+}
+
+@keyframes uiverse723 {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+     54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+     51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+/* From Uiverse.io by G4b413l */ 
+.jelly-triangle {
+ --uib-size: 42px;
+ --uib-speed: 1.25s;
+ --uib-color: #512727;
+ position: relative;
+ height: var(--uib-size);
+ width: var(--uib-size);
+ filter: url('#uib-jelly-triangle-ooze');
+}
+
+.jelly-triangle__dot,
+.jelly-triangle::before,
+.jelly-triangle::after {
+ content: '';
+ position: absolute;
+ width: 33%;
+ height: 33%;
+ background: #65ade8;
+ border-radius: 100%;
+}
+
+.jelly-triangle__dot {
+ top: 6%;
+ left: 30%;
+ animation: grow0 var(--uib-speed) ease infinite;
+}
+
+.jelly-triangle::before {
+ bottom: 6%;
+ right: 0;
+ animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.666)
+    infinite;
+}
+
+.jelly-triangle::after {
+ bottom: 6%;
+ left: 0;
+ animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.333)
+    infinite;
+}
+
+.jelly-triangle__traveler {
+ position: absolute;
+ top: 6%;
+ left: 30%;
+ width: 33%;
+ height: 33%;
+ background: #65ade8;
+ border-radius: 100%;
+ animation: triangulate var(--uib-speed) ease infinite;
+}
+
+.jelly-maker {
+ width: 0;
+ height: 0;
+ position: absolute;
+}
+
+@keyframes triangulate {
+ 0%,
+  100% {
+  transform: none;
+ }
+
+ 33.333% {
+  transform: translate(120%, 175%);
+ }
+
+ 66.666% {
+  transform: translate(-95%, 175%);
+ }
+}
+
+@keyframes grow0 {
+ 0%,
+  100% {
+  transform: scale(1.5);
+ }
+
+ 20%,
+  70% {
+  transform: none;
+ }
+}
+
+.carga {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader2 {
+    margin-top: 6vh;
+}

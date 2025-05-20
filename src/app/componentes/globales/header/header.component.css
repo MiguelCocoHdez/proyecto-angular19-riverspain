@@ -1,0 +1,157 @@
+
+.bg-body-tertiary {
+    background-color: #020611 !important;
+}
+.navbar {
+    box-shadow: 0px 3px 20px 5px #343b5789;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #020611;
+    position: sticky;
+    top: 8px;
+    left: 14px;
+    color: white;
+    z-index: 1000;
+    width: 98%;
+}
+
+.nav-underline {
+    margin-left: 50px;
+    gap: 50px;
+}
+
+.logoHeader {
+    height: 40px;
+    width: 45px;
+    vertical-align: middle;
+    margin: auto 0;
+}
+.logoHeader:hover {
+    content: url('/img/logo-azul.png');
+    height: 45px;
+    width: 45px;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+
+.navbar-brand {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logotipo {
+    height: 50px;
+    vertical-align: middle;
+    margin: auto 0;
+}
+
+.nav-link {
+    color: #f4feff;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #65ade8;
+}
+
+.nav-link:focus {
+    color: #65ade8;
+}
+
+.divVoluntario {
+    display: flex;
+    justify-content: center;
+}
+
+/*BOTON HAZTE VOLUNTARIO*/
+.botonVoluntario {
+    --color: #65ade8;
+    display: inline-block;
+    width: 10em;
+    height: 2.6em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 2rem;
+    font-weight: 500;
+    color: var(--color);
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.3em;
+}
+
+.botonVoluntario:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 300px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.botonVoluntario:hover {
+    color: #fff;
+}
+
+.botonVoluntario:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.botonVoluntario:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.botonVoluntario:active:before {
+    background: #65ade8;
+    transition: background 0s;
+}
+/*FIN BOTON HAZTE VOLUNTARIO*/
+
+/*
+CSS DEL HEADER EN VERSION MOVIL
+*/
+
+@media (max-width: 992px) {
+
+    .navbar-collapse {
+        margin-top: 40px;
+        /*
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;*/
+    }
+
+    .navbar-collapse .nav-underline {
+        text-align: center;
+        margin: 0 !important;
+    }
+}
+
+.navbar-toggler {
+    color: #65ade8;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-width='1.5' d='M1 2.5h14M1 8h14M1 13.5h14'/%3e%3c/svg%3e");
+}
+/*
+CSS DEL HEADER EN VERSION MOVIL
+*/

@@ -1,0 +1,43 @@
+<section>
+  <div class="borde"></div>
+    <div class="container-fluid">
+        <div class="fila row">
+          <div class="textos2 col-lg-6 col-sm-12"
+            data-aos="fade-left" data-aos-duration="1500"
+          >
+            <div class="texto-explicativo">
+                <h2><strong>Estas son las batidas en las que participarás</strong></h2>
+                <p>Recuerda que cada batida es una oportunidad para contribuir significativamente a la protección de la naturaleza. Es fundamental revisar regularmente las fechas programadas, las zonas asignadas y estar siempre atento a cualquier cambio de última hora. ¡Gracias por tu dedicación y compromiso con la causa!</p>
+            </div>
+          </div>
+          <div class="map-container col-lg-6 col-sm-12"
+            data-aos="zoom-in" data-aos-duration="1500"
+          >
+            <svg viewBox="0 0 500 500" class="map-background">
+              <rect style="fill: #f5f0e5" width="500" height="500"></rect>
+              <path
+                style="fill: #90daee"
+                d="M0,367.82c5.83-4.39,14.42-10.16,25.59-15.34,4.52-2.09,43.19-19.51,79.55-11.93,36.1,7.52,35.75,32.55,78.41,60.23,46.34,30.06,109.47,41.21,123.32,22.1,11.95-16.49-22.61-41.92-13.66-84.6,4.85-23.1,22.33-50.71,47.73-58.52,42.42-13.05,78.83,39.45,102.84,23.86,15.81-10.26.01-32.87,22.73-74.43,5.8-10.62,11.65-21.15,11.93-36.93.28-15.69-5.63-26.64-7.95-32.39-6.66-16.45-6.21-45.15,28.84-98.55.23,146.23.46,292.46.69,438.69H0v-132.18Z"
+              ></path>
+            </svg>
+          @for(batida of batidas;  track batida.id){
+              <div class="map-cities">
+                <div [ngStyle]="{'--x': getCoordenadas(batida.id).x, '--y': getCoordenadas(batida.id).y}" class="map-city">
+                  <div class="map-city__label">
+                    <span data-icon="🏖️" class="map-city__sign">{{batida.nombre}}</span>
+                  </div>
+                </div>
+              </div>
+          }
+          </div>
+            <div class="textos col-lg-6"
+              data-aos="fade-left" data-aos-duration="1500"
+            >
+                <div class="texto-explicativo">
+                    <h2><strong>Estas son las batidas en las que participarás</strong></h2>
+                    <p>Recuerda que cada batida es una oportunidad para contribuir significativamente a la protección de la naturaleza. Es fundamental revisar regularmente las fechas programadas, las zonas asignadas y estar siempre atento a cualquier cambio de última hora. ¡Gracias por tu dedicación y compromiso con la causa!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

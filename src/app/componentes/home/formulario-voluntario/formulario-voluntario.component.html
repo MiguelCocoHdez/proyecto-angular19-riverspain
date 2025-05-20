@@ -1,0 +1,207 @@
+<section class="formulario-voluntarios" id="formulario-voluntarios">
+  @if(mostrarInformacion1){
+    <div class="titulo-formulario-hazte-voluntario">
+      <h3>¡Hazte Voluntario!</h3>
+    </div>
+    <div class="texto-formulario-hazte-voluntario">
+      <h4>¿Quieres formar parte de RiverSpain?</h4>
+    </div>
+  }
+<div class="formulario-voluntario row" [class.formularioregister]="estilosRegister1">
+  @if(mostrarInformacion2){
+  <div
+    class="texto-izquierda-form-voluntario col-lg-7 d-none d-lg-block"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+  >
+    <h4>Tu Compromiso, Nuestro Futuro: Únete a RiverSpain</h4>
+    <p>
+      <br />Ser voluntario en RiverSpain significa contribuir a la preservación
+      del medio ambiente mientras disfrutas de una experiencia enriquecedora
+      llena de aprendizaje, conexión y crecimiento personal. Esta plataforma te
+      ofrece la oportunidad de marcar la diferencia participando activamente en
+      la conservación de nuestros ríos y entornos naturales.<br />
+      <br />Unirte es muy sencillo: completa el formulario que tienes al lado,
+      regístrate y empieza a formar parte de esta comunidad. Al inscribirte,
+      recibirás directamente en tu correo un carnet exclusivo que te identifica
+      como voluntario de RiverSpain. Este carnet te permitirá participar en
+      nuestras batidas de limpieza organizadas o incluso liderar las tuyas
+      propias, contando siempre con las herramientas necesarias para hacer la
+      diferencia.<br />
+      <br />¡Únete a esta comunidad y sé parte del cambio que quieres ver en el
+      mundo!
+    </p>
+  </div>
+  <!--Hazte voluntario-->
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="false"
+          aria-controls="collapseOne"
+        >
+          Tu Compromiso, Nuestro Futuro: Únete a RiverSpain
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <p>
+            Ser voluntario en RiverSpain significa contribuir a la preservación
+            del medio ambiente mientras disfrutas de una experiencia
+            enriquecedora llena de aprendizaje, conexión y crecimiento personal.
+            Esta plataforma te ofrece la oportunidad de marcar la diferencia
+            participando activamente en la conservación de nuestros ríos y
+            entornos naturales.<br />
+            <br />Unirte es muy sencillo: completa el formulario que tienes al
+            lado, regístrate y empieza a formar parte de esta comunidad. Al
+            inscribirte, recibirás directamente en tu correo un carnet exclusivo
+            que te identifica como voluntario de RiverSpain. Este carnet te
+            permitirá participar en nuestras batidas de limpieza organizadas o
+            incluso liderar las tuyas propias, contando siempre con las
+            herramientas necesarias para hacer la diferencia. <br />
+            <br /><strong
+              >¡Únete a esta comunidad y sé parte del cambio que quieres ver en
+              el mundo!</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fin hazte voluntario-->
+  }
+  <div
+    class="datos-formulario-voluntario col-md-5 col-sm-12"
+    data-aos="zoom-in" data-aos-duration="1500"
+    [class.datos-formulario-register]="estilosRegister2"
+  >
+    @if(registroExitoso === true){
+      <div class="confirmacion-formulario" class="confirmacion-formulario">
+          <div class="tick-container">
+              <div class="tick"></div>
+          </div>
+          <div class="texto-confirmacion">
+              <p>Tu formulario se ha enviado correctamente</p>
+          </div>
+      </div>
+    }
+    @if(registroExitoso === false) {
+      <div class="error-formulario" class="error-formulario">
+          <div class="cross-container">
+              <div class="cross-line"></div>
+              <div class="cross-line"></div>
+          </div>
+          <div class="texto-error">
+              <p>Error al enviar. Intentalo más tarde</p>
+          </div>
+      </div>
+    }
+    @if(cargando){
+      <app-loader></app-loader>
+    }
+    @if(formularioVisible && !cargando){
+    <div [ngClass]="{'desvanecer-formulario': iniciandoDesvanecimiento}">
+    <form [formGroup]="formularioVoluntarios" [ngClass]="{'formulario-reaparece': formularioVisible}">
+      <div class="texto-dentro-formulario-voluntario">
+        <p>¡Únete a RiverSpain!</p>
+      </div>
+      <div class="nombreApellidos row">
+        <div class="nombre col-12">
+          <input
+            type="text"
+            class="form-control"
+            id="nombreV"
+            placeholder="Nombre"
+            formControlName="nombre"
+          />
+          @if(formularioVoluntarios.get("nombre")?.touched && formularioVoluntarios.get("nombre")?.invalid) {
+            @if(formularioVoluntarios.get("nombre")?.errors?.['required']) {
+                <span class="validaciones">El campo no puede estar vacio</span>
+            }
+          }
+        </div>
+        <div class="apellidos col-12">
+          <input
+            type="text"
+            class="form-control"
+            id="apellidosV"
+            placeholder="Apellidos"
+            formControlName="apellidos"
+          />
+          @if(formularioVoluntarios.get('apellidos')?.touched && formularioVoluntarios.get('apellidos')?.invalid) {
+            @if(formularioVoluntarios.get('apellidos')?.errors?.['required']) {
+                <span class="validaciones">El campo no puede estar vacio</span>
+            }
+          }
+        </div>
+      </div>
+      <div class="emailDNI row">
+        <div class="email col-12">
+          <input
+            type="text"
+            class="form-control"
+            id="emailV"
+            placeholder="Email"
+            formControlName="email"
+          />
+          @if(formularioVoluntarios.get("email")?.touched && formularioVoluntarios.get("email")?.invalid) {
+            @if(formularioVoluntarios.get("email")?.errors?.['pattern']) {
+                <span class="validaciones">El email no es correcto</span>
+            }
+            @if(formularioVoluntarios.get('email')?.errors?.['required']) {
+                <span class="validaciones">El campo no puede estar vacio</span>
+            }
+          }
+        </div>
+        <div class="dni col-12">
+          <input 
+            type="text" 
+            class="form-control" 
+            id="dniV" 
+            placeholder="DNI" 
+            formControlName="dni" />
+            @if(formularioVoluntarios.get('dni')?.touched && formularioVoluntarios.get('dni')?.invalid) {
+                @if(formularioVoluntarios.get('dni')?.errors?.['required']) {
+                    <span class="validaciones">El campo no puede estar vacio</span>
+                }
+                @if(formularioVoluntarios.get('dni')?.errors?.['pattern']) {
+                    <span class="validaciones">DNI no válido</span>
+                }
+                @if(formularioVoluntarios.get('dni')?.errors?.['dniExiste']) {
+                    <span class="validaciones">El DNI ya existe</span>
+                }
+            }
+        </div>
+      </div>
+      <div class="botonEnviarVoluntarios">
+          <button
+          type="button"
+          class="btn btn-primary"
+          id="botonEnviarVoluntario"
+          (click)="crearVoluntario()"
+          >
+            Enviar
+          </button>
+      </div>
+    </form>
+    </div>
+    }
+    @if(mostrarInformacion3){
+      <div class="texto-login">
+        <button 
+        class="botonLogin"
+        (click)="mostrarLogin()"
+        >¿Ya eres voluntario? <span class="frase-ic">Inicia Sesión</span></button>
+      </div>
+    }
+  </div>
+</div>
+</section>

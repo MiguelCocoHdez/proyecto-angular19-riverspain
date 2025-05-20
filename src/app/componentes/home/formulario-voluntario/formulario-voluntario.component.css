@@ -1,0 +1,271 @@
+.titulo-formulario-hazte-voluntario {
+    text-align: center;
+    margin-top: 5%;
+    color: #f4feff;
+}
+.texto-formulario-hazte-voluntario {
+    text-align: center;
+    color: #f4feff;
+    margin-bottom: 3%;
+}
+.texto-izquierda-form-voluntario {
+    text-align: justify;
+    margin-top: 10%;
+    margin-left: 1%;
+    color: #f4feff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 17px;
+}
+.formulario-voluntario {
+    margin-left: 5%;
+    margin-right: 5%;
+    background: linear-gradient(500deg, #020611 40%, #343b57 70%);
+    border-radius: 1.5rem;
+}
+.formulario-voluntario.formularioregister {
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+.datos-formulario-voluntario {
+  width: 30%;
+  margin-left: 7%;
+  margin-top: 4%;
+  background: #F8F9FD;
+  background: linear-gradient(300deg, #65ade8 0%, #f4feff 70%);
+  border-radius: 40px;
+  border: 5px solid #f4feff;
+  box-shadow: #65ade8 0px 30px 30px -20px;
+  margin-bottom: 4%;
+}
+.datos-formulario-voluntario.datos-formulario-register {
+    margin-left: 0;
+}
+.texto-dentro-formulario-voluntario {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    color: #020611;
+    font-weight: 900;
+    font-size: 30px;
+}
+.nombre, .apellidos, .email, .dni {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 5%;
+}
+.form-control::placeholder {
+    color: #8e8f92;
+}
+#nombreV, #apellidosV, #emailV, #dniV {
+    border-radius: 20px;
+    background-color: #f4feff;
+    border: none;
+    box-shadow: #65ade8 0px 10px 10px -5px;
+    height: 50px;
+}
+.botonEnviarVoluntarios {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+#botonEnviarVoluntario {
+    display: block;
+    width: 40%;
+    font-weight: bold;
+    background: linear-gradient(300deg, #3878d0 0%, #7bbcf1 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+#botonEnviarVoluntario:hover {
+    transform: scale(1.03);
+}
+#botonEnviarVoluntario:active {
+    transform: scale(0.95);
+    box-shadow: #494cd1 0px 15px 10px -10px;
+}
+.texto-login {
+    display: flex;
+    justify-content: center;
+}
+.botonLogin {
+    background: none;
+    border: none;
+    margin-bottom: 5%;
+    color: #262758;
+    font-weight: bold;
+}
+.frase-ic {
+    display: inline-block;
+}
+.frase-ic:hover {
+    color: #0663e7;
+    transform: scale(1.1);
+    padding-left: 0.2rem;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.9); }
+  10% { opacity: 1; transform: scale(1); }
+  90% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+.confirmacion-formulario,
+.error-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30% 0 20% 0;
+  animation: fadeInOut 3s ease-in-out forwards;
+  height: 310px;
+}
+
+/* TICK */
+.tick-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.confirmacion-formulario .tick {
+  width: 50px;
+  height: 50px;
+  border: 5px solid green;
+  border-radius: 50%;
+  position: relative;
+}
+
+.confirmacion-formulario .tick::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 12px;
+  height: 24px;
+  border: solid green;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+}
+
+/* CRUZ */
+.cross-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.error-formulario .cross-line {
+  width: 50px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  top: 22px;
+  left: 0;
+}
+
+.error-formulario .cross-line:first-child {
+  transform: rotate(45deg);
+}
+
+.error-formulario .cross-line:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Mensajes de texto */
+.texto-confirmacion p,
+.texto-error p {
+  font-weight: bold;
+  color: #020611;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* CSS VALIDACIONES */
+.validaciones {
+    color: red;
+    margin-top: 4%;
+}
+
+.formulario-reaparece {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.desvanecer-formulario {
+  animation: fadeOut 0.5s ease forwards;
+}
+@media (min-width: 991px) {
+    #accordionExample {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .datos-formulario-voluntario {
+        width: 97%;
+        margin-left: 2%;
+    }
+    #accordionExample {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .accordion-button {
+        background: linear-gradient(300deg, #65ade8 0%, #f4feff 70%);
+        font-weight: bold;
+        color: #020611;
+        border: 3px solid #f4feff;
+    }
+    .accordion-body {
+        background-color: #f4feff;
+        border-radius: 1.5rem;
+        border: 3px solid #f4feff;
+    }
+    .formulario-voluntario {
+        margin-left: 9%;
+        margin-right: 9%;
+        margin-bottom: 9%;
+    }
+    .texto-confirmacion p {
+        padding-bottom: 20%;
+    }
+}
+@media (max-width: 992px){
+    .formulario-voluntario {
+       background: none;
+    }
+}
+@media (max-width: 991px) {
+  .confirmacion-formulario,
+  .error-formulario {
+    width: 97%;
+    margin-left: 2%;
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="padre-mapa">
+    <google-map
+      mapId="622b9d99ec408b63"
+      height="'100%'"
+      width="'100%'"
+      [center]="center"
+      [zoom]="zoom"
+      [options]="mapOptions"
+    >
+      @for (zona of zonas; track zona) {
+        <map-advanced-marker
+          #marker="mapAdvancedMarker"
+          [position]="{ lat: zona.latitud, lng: zona.longitud }"
+          (mapClick)="abrirInfoMarker(zona, marker)"
+          [content]="crearImgMarkerZona(zona)"
+        />
+      }
+      <map-info-window />
+    </google-map>
+  </div>
+  

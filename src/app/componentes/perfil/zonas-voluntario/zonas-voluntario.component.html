@@ -1,0 +1,38 @@
+<section>
+    <div class="borde"></div>
+    <div class="container-fluid">
+      <div class="textos-titulo">
+        <div class="texto-titulo">
+          <h2>Zonas que custodias con tu compromiso</h2>
+        </div>
+        <div class="texto-subtitulo">
+          <p>Estas son las áreas que proteges como voluntario, reflejo de tu entrega y responsabilidad.</p>
+        </div>
+      </div>
+      <div
+        class="slider"
+        [style.--width]="'200px'"
+        [style.--height]="'200px'"
+        [style.--quantity]="zonas.length"
+      >
+        <div class="list">
+          @for(zona of zonas; track zona.id) {
+            <div class="item" [style.--position]="zona.id">
+              <div class="card">
+                <div class="mapa">
+                  <app-mapa-zonas-voluntario
+                    [zonas]="[zona]"
+                    [center]="{ lat: zona.latitud, lng: zona.longitud }"
+                  ></app-mapa-zonas-voluntario>
+                </div>
+                <div class="content">
+                  <p>{{ zona.nombre }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,41 @@
+<div class="formulario-custodiar"
+>
+    <form [formGroup]="formularioZonas">
+        <div class="datos-formulario-custodiar">
+            <div class="row">
+                <div class="titulo-formulario-custodiar-dentro">
+                    <h3>Zonas Disponibles</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="numero-voluntario col-12">
+                    <label for="" class="form-label">Numero de Voluntario</label>
+                    <input type="text" class="form-control" id="numeroVoluntario" formControlName="numeroVoluntario">
+                    @if(formularioZonas.get('numeroVoluntario')?.invalid && formularioZonas.get('numeroVoluntario')?.touched) {
+                        @if(formularioZonas.get('numeroVoluntario')?.errors?.['required']) {
+                            <span class="validaciones">El campo es obligatorio</span>
+                        }
+                        @if(formularioZonas.get('numeroVoluntario')?.errors?.['numeroNoExiste']) {
+                            <span class="validaciones">El numero de voluntario no existe</span>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="zonas-disponibles col-12">
+                    <select name="" id="desplegable" class="form-select" formControlName="zonaSeleccionada">
+                        <option selected>Seleciona donde custodiar zona</option>
+                        @for(item of ciudades; track item.nombre) {
+                            <option value="{{item.id}}">{{item.nombre}}</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boton-aceptar">
+                    <button type="button" class="btn btn-primary" id="botonZona" (click)="irAlMapa()">Ir a la zona</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

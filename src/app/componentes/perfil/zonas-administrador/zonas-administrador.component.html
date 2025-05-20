@@ -1,0 +1,34 @@
+<section>
+  <div class="textos">
+    <div class="titulo">
+      <h2><strong>Descargar documento zonas</strong></h2>
+    </div>
+  </div>
+  <div class="tabla-batidas"
+    data-aos="zoom-in" data-aos-duration="1500"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Latidud</th>
+          <th>Longitud</th>
+          <th>PDF</th>
+          <th>Excel</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(zona of zonas; track zona.id) {
+          <tr>
+            <td>{{ zona.nombre }}</td>
+            <td>{{ zona.latitud }}</td>
+            <td>{{ zona.longitud }}</td>
+            <td><button class="btn pdf" (click)="generarInformeZonaPDF(zona.id)">PDF</button></td>
+            <td><button class="btn excel" (click)="generarInformeZonaExcel(zona.id)">Excel</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="borde"></div>
+</section>

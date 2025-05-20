@@ -1,0 +1,41 @@
+<div class="batida-card"
+  data-aos="fade-left"
+     data-aos-offset="500"
+     data-aos-duration="500"
+     data-aos-easing="ease-in-sine">
+>
+    <div class="batida-content">
+      <h2 class="batida-title">{{batida.nombre}}</h2>
+      <div class="batida-divider"></div>
+      
+      <div class="batida-info">
+        <p class="batida-description">{{batida.descripcion}}</p>
+        
+        <div class="batida-details">
+          <div class="detail-item">
+            <div class="detail-icon">📅</div>
+            <div class="detail-text">
+              <span class="detail-label">Fecha de la batida:</span>
+              <span class="detail-value">{{batida.fecha}}</span>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <div class="detail-icon">👥</div>
+            <div class="detail-text">
+              <span class="detail-label">Voluntarios apuntados:</span>
+              <span class="detail-value">{{nVoluntariosBatida.length}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button (click)="custodiarBatida()" class="batida-button">
+        <span class="button-text">Apúntate a esta batida</span>
+        <span class="button-icon">→</span>
+        <span class="button-effect"></span>
+      </button>
+      
+      <p class="batida-message">{{mensaje}}</p>
+    </div>
+  </div>

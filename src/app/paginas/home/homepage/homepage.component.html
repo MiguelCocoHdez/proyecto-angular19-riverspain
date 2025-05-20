@@ -1,0 +1,17 @@
+@if(cargando){
+    <app-loader></app-loader>
+}
+@if(!cargando){
+    <app-header />
+<app-video-home />
+<app-explorar-especies />
+<app-custodiar-zona />
+@defer (hydrate on viewport) {
+    <app-defendemos />
+}
+@defer (hydrate on viewport) {
+    <app-donaciones />
+}
+<app-formulario-voluntario [mostrarInformacion3]="false"/>
+<app-footer />
+}

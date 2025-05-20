@@ -1,0 +1,270 @@
+.textos-titulo {
+  margin-top: 3%;
+}
+.texto-titulo, .texto-subtitulo {
+  display: flex;
+  justify-content: center;
+  color: #f4feff;
+}
+.tarjeta-zona {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  gap: 30px;
+}
+.mapa {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  padding: 5%;
+}
+app-mapa-zonas {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.borde {
+  border: 1px solid #f4feff;
+  margin: 3% 45% 0 45%;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(22, 53, 77, 0.2);
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #16354D, #6B99C3);
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0);
+}
+
+.card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 10px 25px rgba(22, 53, 77, 0.3);
+  background: linear-gradient(135deg, #1a4060, #7baad9);
+}
+
+
+
+.card .content {
+  padding: 15px;
+  position: relative;
+  background: rgba(22, 53, 77, 0.9);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(244, 254, 255, 0.1);
+}
+
+.card p {
+  font-size: 16px;
+  color: #f4feff;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.card p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #6B99C3, transparent);
+  border-radius: 3px;
+}
+
+
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  margin: 2% 0 2% 0;
+}
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  transition: filter 0.5s;
+  animation-delay: calc(
+    (10s / var(--quantity)) * (var(--position) - 1) - 10s
+  ) !important;
+}
+.slider .list .item img {
+  width: 100%;
+}
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+.slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.slider .item:hover {
+  filter: grayscale(0);
+}
+.slider[reverse="true"] .item {
+  animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media (min-width: 389px) and (max-width: 575px) {
+  /* Contenedor principal */
+  section {
+    padding: 20px 0;
+  }
+  
+  /* Borde decorativo */
+  .borde {
+    height: 3px;
+    margin-bottom: 15px;
+  }
+  
+  /* Contenedor fluido */
+  .container-fluid {
+    padding: 0 15px;
+  }
+  
+  /* Textos de título y subtítulo */
+  .textos-titulo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .texto-titulo h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  .texto-subtitulo p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 95%;
+  }
+  
+  /* Ajustes del slider */
+  .slider {
+    --width: 170px !important; /* Reducir el ancho de las tarjetas */
+    --height: 170px !important; /* Reducir la altura de las tarjetas */
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Lista de elementos del slider */
+  .list {
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  /* Elementos individuales del slider */
+  .item {
+    transform-origin: center center;
+    padding: 0 5px;
+  }
+  
+  /* Tarjetas dentro del slider */
+  .card {
+    width: var(--width);
+    height: var(--height);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Contenedor del mapa */
+  .mapa {
+    height: 75%; /* Ajustar proporción del mapa */
+    overflow: hidden;
+  }
+  
+  /* Componente de mapa */
+  app-mapa-zonas-voluntario {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  /* Contenido de texto */
+  .content {
+    height: 25%; /* Ajustar proporción del contenido */
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content p {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    /* Evitar que textos largos se desborden */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  
+  /* Ajustes para mejorar la navegación táctil */
+  .slider::after {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-style: italic;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .borde {
+    margin: 7% 40% 0 40%;
+  }
+  .texto-subtitulo {
+    text-align: center;
+  }
+  .textos-titulo {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .borde {
+    margin: 5% 40% 0 40%;
+  }
+  .texto-subtitulo {
+    text-align: center;
+  }
+  .textos-titulo {
+    margin-top: 5%;
+  }
+} 

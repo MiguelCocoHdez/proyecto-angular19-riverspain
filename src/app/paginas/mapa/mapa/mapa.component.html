@@ -1,0 +1,23 @@
+<app-header />
+@if(cargando) {
+    <app-loader></app-loader>
+}
+@if(!cargando){
+    <div class="container-fluid">
+    <div class="contenido-pagina">
+        <app-lista-zonas 
+        [zonas]="zonas"
+        />
+        <app-mapa-zonas 
+        [idCiudad]="idCiudad"
+        [latitud]="latitud"
+        [longitud]="longitud"
+        [center]="center"
+        [zonas]="zonas"
+        class="mapa"
+        />
+    </div>  
+</div>
+}
+
+<app-footer />

@@ -1,0 +1,61 @@
+.imagen-explorar-especies-tarjeta-rio img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.titulo-explorar-especies {
+    display: flex;
+    justify-content: center;
+    color: #f4feff;
+}
+.titulo-abajo-explorar-especies {
+    display: flex;
+    justify-content: center;
+    color: #f4feff;
+}
+.titulo-explorar-especies-tarjeta-rio {
+    color: #f4feff;
+    font-size: 25px;
+    padding-top: 2%;
+}
+.texto-explorar-especies-tarjeta-rio {
+    color: #f4feff;
+    padding-top: 2%;
+}
+.textos-especies-explorar {
+    height: 240px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    background: #040c21;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.tarjeta-rio {
+    width: 25%;
+    box-shadow: 0px 2px 20px 1px #65ade8;
+    padding: 0;
+    margin-top: 1%;
+    border-radius: 20px;
+}
+.tarjeta-rio a {
+    text-decoration: none;
+
+}
+
+.tarjeta-rio:hover{
+    box-shadow: 0px 2px 20px 5px #f4feff;
+    transition: 0.7s !important; 
+}
+.tarjetas-rios {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.boton-explorar-especies {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 0;
+  }

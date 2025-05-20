@@ -1,0 +1,402 @@
+body{
+  background-color: #020611;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  }
+  .fila {
+    width: 100%;
+  }
+  .columnas {
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    padding-right: 0;
+  }
+  .card {
+    width: 480px;
+    height: 350px;
+    background: #020611;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 2%;
+  }
+  
+  .card h2 {
+    z-index: 1;
+    color: white;
+    font-size: 3em; /* Ajusté el tamaño del texto para que sea proporcional */
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 170px; /* Aumenté el tamaño del borde animado */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 183, 255)), to(rgb(19, 22, 209)));
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(19, 22, 209));
+    height: 170%; /* Aumenté la altura del borde animado */
+    opacity: 0; /* No visible sin hover */
+    transition: all 0.1s linear;
+    border-radius: 10px;
+  }
+  
+  .card:hover::before {
+    opacity: 1; /* Visible solo con hover */
+    -webkit-animation: rotBGimg 3s linear infinite;
+            animation: rotBGimg 3s linear infinite;
+  }
+  
+  @-webkit-keyframes rotBGimg {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #181818;
+    inset: 5px;
+    border-radius: 20px;
+    color: white;
+    transition: background-color 300ms ease-in-out;
+  }
+  
+  .card img{
+    z-index: 1;
+    margin-top: 5px;
+    width: 98%;
+    height: 230px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-left: 10px;
+  }
+  
+  .contenido-texto{
+    z-index: 1;
+    height: 150px;
+    color: white;
+    margin: 0;
+    margin-left: 22px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width:90%;
+    justify-content:space-between;
+
+  }
+  .nombres{
+    width: 300px;
+  }
+  .nombre-comun{
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  .nombre-comun p{
+    margin: 0;
+    margin-top: 12px;
+  }
+  
+  .nombre-cientifico{
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .origen-exotico{
+    padding-left: 5px;
+  }
+  .origen{
+    padding-left: 5px;
+    text-align: center;
+  }
+  .origen-endemico{
+    padding-left: 5px;
+    text-align: center;
+  }
+  .origen-texto{
+    color: rgb(12, 173, 12);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .origen-texto-exotico{
+    color: rgb(215, 25, 25);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .origen-texto-endemico{
+    color: rgb(135, 171, 220);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  .ver-mas {
+    background: linear-gradient(45deg, #2196F3, #00BCD4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    z-index: 1;
+}
+
+.ver-mas:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00BCD4, #2196F3);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.ver-mas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+}
+
+.ver-mas:hover:before {
+    left: 0;
+}
+
+.ver-mas:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+/* Animación de pulso para llamar la atención */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.card:hover .ver-mas {
+    animation: pulse 1.5s infinite;
+}
+
+.card:hover .origen p {
+  color: #020611;
+  font-weight: bold;
+  padding-top: 1%;
+}
+  
+  .card:hover:after{
+    background-color: rgba(244, 254, 255);
+  }
+  
+  .card:hover{
+    transform: scale(1.02);
+    transition: 500ms ease;
+  }
+  
+  .card:hover .nombre-comun{
+    font-size: 28px;
+    color: black;
+    transition: 700ms ease;
+  }
+  .card:hover .nombre-cientifico{
+    color: black;
+    transition: 700ms ease;
+  }
+  .card:hover .origen-texto{
+    margin-bottom: 0;
+    margin-top: 17px;
+    transition: 700ms ease;
+  }
+  .card:hover .origen-texto-exotico{
+    margin-bottom: 0;
+    margin-top: 17px;
+    transition: 700ms ease;
+  }
+  .card:hover .origen-texto-endemico{
+    margin-bottom: 0;
+    margin-top: 17px;
+    transition: 700ms ease;
+  }
+  .card:hover .ver-mas{
+    color: black;
+    transition: 700ms ease;
+  }
+  a{
+    text-decoration: none;
+  }
+  .enlace:visited{
+    text-decoration: none;
+    color: inherit;
+  }
+
+@media (min-width: 389px) and (max-width: 575px) {
+  /* Ajustes generales de la sección */
+  section {
+    padding: 10px;
+  }
+  
+  .fila {
+    margin: 0;
+  }
+  
+  .columnas {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Ajustes de la tarjeta */
+  .card {
+    width: 100%;
+    min-width: 350px;
+    max-width: 350px;
+    height: auto;
+    min-height: 320px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+  /* Contenedor de la imagen */
+  .card > div:first-of-type {
+    width: 100% !important; /* Sobreescribe el ancho inline */
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Ajustes de la imagen */
+  .imagen-pez {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    padding: 0 !important;
+  }
+  
+  /* Ajustes del contenido de texto */
+  .contenido-texto {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    margin: 0 !important;
+    width: 100% !important;
+    gap: 10px;
+  }
+  
+  /* Ajustes de los nombres */
+  .nombres {
+    width: 100%;
+  }
+  
+  .nombre-comun {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  .nombre-comun p {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .nombre-cientifico {
+    font-size: 14px;
+  }
+  
+  .nombre-cientifico p {
+    margin: 0;
+  }
+  
+  /* Ajustes del origen y botón */
+  .origen {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .origen p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Ajustes del botón */
+  .ver-mas {
+    padding: 8px 15px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  /* Ajustes de los efectos hover */
+  .card:hover {
+    transform: scale(1.01); /* Reducir la escala en hover para móviles */
+  }
+  
+  .card:hover .nombre-comun {
+    font-size: 18px; /* Mantener el mismo tamaño en hover */
+  }
+  
+  .card:hover::before {
+    width: 120px; /* Reducir el tamaño del borde animado */
+    height: 150%; /* Ajustar la altura del borde animado */
+  }
+  
+  /* Ajustes para la animación AOS */
+  [data-aos] {
+    /* Opcional: reducir la duración de la animación para móviles */
+    transition-duration: 800ms !important;
+  }
+  
+  /* Ajustes para el loader */
+  app-loader {
+    margin: 20px auto;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .columnas {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+}

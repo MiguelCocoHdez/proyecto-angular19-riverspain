@@ -1,0 +1,175 @@
+.custodiar-zona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 4%;
+}
+
+.titulo-custodiar-zona {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-custodiar-zona h3 {
+    color: #f4feff;
+}
+
+.peces-ayudados {
+    display: flex;
+    justify-content: center;
+}
+
+.peces-ayudados p {
+    color: #f4feff;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.mapa-custodiar-zona {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.mapa-custodiar-zona img {
+    width: 50%;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(4%) saturate(1200%) hue-rotate(170deg) brightness(108%) contrast(97%);
+}
+
+.container-info-custodiar-zona {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-custodiar-zona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.info-custodiar-zona p {
+    color: #f4feff;
+    margin: 0;
+}
+
+.info-custodiar-zona-p1 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.boton-custodiar-zonas {
+    margin-top: 4%;
+    margin-left:0px;
+}
+
+@media (min-width: 389px) and (max-width: 575px) {
+  /* Contenedor principal */
+  .custodiar-zona {
+    padding: 20px 15px;
+  }
+  
+  /* Título */
+  .titulo-custodiar-zona h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+  
+  /* Contador de peces */
+  .peces-ayudados {
+    margin-bottom: 20px;
+  }
+  
+  .milestone-number {
+    font-size: 48px !important; 
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Mapa */
+  .mapa-custodiar-zona {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .mapa-custodiar-zona img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  /* Contenedor de información */
+  .container-info-custodiar-zona {
+    margin: 0;
+    padding: 0 10px;
+  }
+  
+  /* Bloques de información */
+  .info-custodiar-zona {
+    text-align: center;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  /* Ajuste para que los bloques ocupen el 50% en móviles */
+  .info-custodiar-zona.col-sm-6 {
+    width: 50%;
+    padding: 10px 5px;
+  }
+  
+  /* Texto principal en bloques de información */
+  .info-custodiar-zona-p1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Texto secundario en bloques de información */
+  .info-custodiar-zona p:not(.info-custodiar-zona-p1) {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Botón */
+  .boton-custodiar-zonas {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Componente de botón personalizado */
+  app-boton-agua {
+    width: 80%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Ajustes para las animaciones AOS */
+  [data-aos="fade-up"] {
+    transition-duration: 800ms !important;
+  }
+  
+  /* Ajustes para mejorar el espaciado general */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+    .info-custodiar-zona {
+        width: 50%;
+    }
+}

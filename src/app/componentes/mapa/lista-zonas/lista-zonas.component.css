@@ -1,0 +1,35 @@
+.tarjetas-zona {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.titulo-zonas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+    width: 100%;
+    margin-top: 7%;
+  }
+  
+
+  .titulo-zonas-mensaje {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    color: #343b57;
+    background-color: #f4feff;
+    border-left: 5px solid #0072ff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+  }
+  
+
+  @media (max-width: 768px) {
+    .titulo-zonas-mensaje {
+      font-size: 1.3rem;
+      padding: 1.2rem 2rem;
+    }
+  }

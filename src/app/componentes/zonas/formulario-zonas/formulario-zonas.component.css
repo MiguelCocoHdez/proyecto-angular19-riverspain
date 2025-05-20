@@ -1,0 +1,100 @@
+label {
+    color: #020611;
+}
+
+.formulario-custodiar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 60%;
+}
+
+.titulo-formulario-custodiar h3 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.titulo-formulario-custodiar-dentro {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #020611;
+    font-weight: 900;
+}
+
+.datos-formulario-custodiar {
+    margin-left: 7%;
+    margin-top: 4%;
+    padding: 7%;
+    background: #F8F9FD;
+    background: linear-gradient(300deg, #65ade8 0%, #f4feff 70%);
+    border-radius: 40px;
+    border: 5px solid #f4feff;
+    box-shadow: #65ade8 0px 30px 30px -20px;
+}
+
+.numero-voluntario {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.zonas-disponibles {
+    margin-bottom: 4%;
+}
+
+.boton-aceptar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botonZona {
+    display: block;
+    width: 40%;
+    font-weight: bold;
+    background: linear-gradient(300deg, #3878d0 0%, #7bbcf1 100%);
+    color: white;
+    padding-block: 15px;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+#botonZona:hover {
+    transform: scale(1.03);
+}
+#botonZona:active {
+    transform: scale(0.95);
+    box-shadow: #494cd1 0px 15px 10px -10px;
+}
+
+.validaciones {
+    color: red;
+}
+
+@media(max-width: 767px) {
+    form {
+        width: 90%;
+        margin-right: 6%;
+        margin-bottom: 4%;
+    }
+    #botonZona {
+        width: 60%;
+        margin-top: 8%;
+    }
+    .zonas-disponibles {
+        margin-top: 4%;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    form {
+        width: 90%;
+        margin-right: 6%;
+        margin-bottom: 4%;
+    }
+}

@@ -1,0 +1,10 @@
+<app-header />
+@if(mostrarLogin){
+    <app-formulario-login (registroClick)="alternarFormulario()" />
+}
+@else {
+    <app-formulario-voluntario (loginClick)="alternarFormulario()" [mostrarInformacion1]="false" [mostrarInformacion2]="false" [estilosRegister1]="true"
+    [estilosRegister2]="true"
+    />
+}
+ <app-footer />

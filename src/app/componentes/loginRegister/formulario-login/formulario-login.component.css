@@ -1,0 +1,107 @@
+.formulario-login {
+    display: flex;
+    justify-content: center;
+}
+.datos-formulario-login {
+    width: 30%;
+    margin-top: 4%;
+    background: #F8F9FD;
+    background: linear-gradient(300deg, #65ade8 0%, #f4feff 70%);
+    border-radius: 40px;
+    border: 5px solid #f4feff;
+    box-shadow: #65ade8 0px 30px 30px -20px;
+    margin-bottom: 4%;
+}
+.texto-dentro-formulario-login {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    color: #020611;
+    font-weight: 900;
+    font-size: 30px;
+}
+.divEmail, .divPassword {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 5%;
+}
+.form-control::placeholder {
+    color: #8e8f92;
+}
+#emailV, #passwordV {
+    border-radius: 20px;
+    background-color: #f4feff;
+    border: none;
+    box-shadow: #65ade8 0px 10px 10px -5px;
+    height: 50px;
+}
+.botonEnviarUsuario {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+#botonEnviarUsuario {
+    display: block;
+    width: 40%;
+    font-weight: bold;
+    background: linear-gradient(300deg, #3878d0 0%, #7bbcf1 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+#botonEnviarUsuario:hover {
+    transform: scale(1.03);
+}
+#botonEnviarUsuario:active {
+    transform: scale(0.95);
+    box-shadow: #494cd1 0px 15px 10px -10px;
+}
+.texto-registrar {
+    display: flex;
+    justify-content: center;
+}
+.botonRegister {
+    background: none;
+    border: none;
+    margin-bottom: 5%;
+    color: #262758;
+    font-weight: bold;
+}
+.frase-registrate {
+    display: inline-block;
+}
+.frase-registrate:hover {
+    color: #0663e7;
+    transform: scale(1.1);
+    padding-left: 0.2rem;
+}
+.mensajeError {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2%;
+}
+
+@media (max-width: 576px) {
+    .datos-formulario-login {
+        width: 80%;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .datos-formulario-login {
+        width: 60%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .datos-formulario-login {
+        width: 50%;
+    }
+}

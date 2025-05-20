@@ -1,0 +1,16 @@
+@if(cargando){
+    <app-loader></app-loader>
+}
+@if(!cargando){
+    <app-header />
+    @if(rol === 'Administrador'){
+        <app-zonas-administrador></app-zonas-administrador>
+        <app-batidas-administrador></app-batidas-administrador>
+    }
+    @else {
+        <app-datos-voluntario></app-datos-voluntario>
+        <app-zonas-voluntario></app-zonas-voluntario>
+        <app-batidas-voluntario></app-batidas-voluntario>
+    }
+    <app-footer />
+}

@@ -1,0 +1,22 @@
+.titulo-formulario-custodiar {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    color: #f4feff;
+}
+
+.titulo-formulario-custodiar h3 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.texto-info-custodiar {
+    text-align: justify;
+    color: #f4feff;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7%;
+    margin-right: 7%;
+}

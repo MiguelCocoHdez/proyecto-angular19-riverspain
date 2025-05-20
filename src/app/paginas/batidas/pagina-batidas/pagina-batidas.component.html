@@ -1,0 +1,38 @@
+<app-header />
+@if(cargando){
+    <app-loader></app-loader>
+}
+@if(!cargando){
+<section>
+    <div data-aos="fade-right"
+     data-aos-offset="500"
+     data-aos-duration="500"
+     data-aos-easing="ease-in-sine">
+        @if(batidasZona.length > 0) {
+    @for (batida of batidasZona; track batida) {
+        <div class="row">
+            <div class="col-lg-6 mapa">
+                <app-mapa-zonas
+                [zonas]="todaInfoBatidasZona"
+                [center]="center"
+                [latitud]="latitud"
+                [longitud]="longitud"
+                />
+            </div>
+            <div class="col-lg-6 tarjeta-batida">
+                <app-tarjeta-batida
+                [batida]="batida"
+                />
+            </div>
+        </div>
+    }
+}
+@else {
+    <div class="no-batidas-container">
+        <p class="no-batidas-mensaje">NO HAY BATIDAS DISPONIBLES PARA ESTA ZONA</p>
+      </div>
+}
+    </div>
+</section>
+}
+<app-footer />

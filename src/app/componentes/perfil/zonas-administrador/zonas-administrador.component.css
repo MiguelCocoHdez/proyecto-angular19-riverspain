@@ -1,0 +1,80 @@
+.textos {
+    text-align: center;
+    margin-top: 2rem;
+    color: #f4feff;
+}
+
+.titulo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.tabla-batidas {
+    padding: 0 1.5rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1f2f;
+    color: #f4feff;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #65ade8;
+    color: #f4feff;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #444;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 198, 255, 0.1);
+}
+
+.btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+.btn.pdf {
+    background: #007bff;
+    color: #f4feff;
+}
+
+.btn.pdf:hover {
+    background: #0056b3;
+}
+
+.btn.excel {
+    background: #28a745;
+    color: #fef4ff;
+}
+
+.btn.excel:hover {
+    background: #1e7e34;
+}
+
+.borde {
+    border: 1px solid #f4feff;
+    margin: 3% 45% 0 45%;
+}
+@media (max-width: 992px) {
+    .borde {
+        margin: 3% 40% 0 40%;
+    }
+}

@@ -1,0 +1,53 @@
+<section class="formulario-login">
+    <div class="datos-formulario-login"
+        data-aos="zoom-in" data-aos-duration="1500"
+    >
+        <form [formGroup]="formularioUsuarios">
+            <div class="texto-dentro-formulario-login">
+                <p>¡Inicia Sesión!</p>
+            </div>
+            <div class="divEmail row">
+                <div class="email col-12">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="emailV"
+                        placeholder="Email"
+                        formControlName="email"
+                    />
+                    @if(errorLogin){
+                        <span class="mensajeError">{{errorLogin}}</span>
+                    }
+                </div>
+            </div>
+            <div class="divPassword row">
+                <div class="password col-12">
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="passwordV"
+                        placeholder="Contraseña"
+                        formControlName="password"
+                    />
+                </div>
+            </div>
+            <div class="botonEnviarUsuario">
+                <button
+                type="button"
+                class="btn btn-primary"
+                id="botonEnviarUsuario"
+                (click)="login()"
+                
+                >
+                    Iniciar Sesión
+                </button>
+            </div>        
+        </form>
+        <div class="texto-registrar">
+            <button 
+            class="botonRegister"
+            (click)="mostrarRegistro()"
+            >¿No eres voluntario? <span class="frase-registrate">Regístrate</span></button>
+        </div>
+    </div>
+</section>

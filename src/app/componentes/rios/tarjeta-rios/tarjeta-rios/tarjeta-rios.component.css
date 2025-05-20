@@ -1,0 +1,244 @@
+.card {
+    width: 450px;  
+    height: 350px;
+    background: #020611;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 3%;
+  }
+  
+  .card h6 {
+    z-index: 1;
+    color: white;
+    font-size: 1.5em; /* Ajusté el tamaño del texto para que sea proporcional */
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 170px; /* Aumenté el tamaño del borde animado */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 183, 255)), to(rgb(19, 22, 209)));
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(19, 22, 209));
+    height: 170%; /* Aumenté la altura del borde animado */
+    opacity: 0; /* No visible sin hover */
+    transition: all 0.1s linear;
+    border-radius: 10px;
+  }
+  
+  .card:hover::before {
+    opacity: 1; /* Visible solo con hover */
+    -webkit-animation: rotBGimg 3s linear infinite;
+            animation: rotBGimg 3s linear infinite;
+  }
+  
+  @-webkit-keyframes rotBGimg {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #181818;
+    inset: 5px;
+    border-radius: 20px;
+    color: white;
+    transition: background-color 300ms ease-in-out;
+  }
+  
+  .card img{
+    z-index: 1;
+    margin-top: 5px;
+    width: 440px; /* La imagen ocupa el ancho del contenedor */
+    height: 230px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Hace que la imagen se ajuste al tamaño del contenedor */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .contenido-texto{
+    z-index: 1;
+    height: 150px;
+    color: white;
+    margin: 0;
+    margin-left: 22px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width:90%;
+    justify-content:space-between;
+
+  }
+  .nombres{
+    width: 300px;
+  }
+  .nombre-comun{
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  .nombre-comun p{
+    margin: 0;
+    margin-top: 12px;
+  }
+  
+  .nombre-cientifico{
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .origen-exotico{
+    padding-left: 5px;
+  }
+  .origen{
+    padding-left: 5px;
+    text-align: center;
+  }
+  .origen-texto{
+    color: rgb(12, 173, 12);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .origen-texto-exotico{
+    color: rgb(215, 25, 25);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .origen-texto-endemico{
+    color: rgb(135, 171, 220);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .origen-texto-exotico{
+    color: rgb(215, 25, 25);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .ver-mas{
+    color: transparent;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+  
+  .card:hover:after{
+    background-color: rgba(244, 254, 255);
+  }
+  
+  .card:hover{
+    transform: scale(1.02);
+    transition: 500ms ease;
+  }
+  
+  .card:hover .nombre-comun{
+    font-size: 30px;
+    color: black;
+    transition: 700ms ease;
+  }
+  .card:hover .nombre-cientifico{
+    color: black;
+    transition: 700ms ease;
+  }
+  .card:hover .origen-texto{
+    margin-bottom: 0;
+    margin-top: 17px;
+    transition: 700ms ease;
+  }
+  .card:hover .origen-texto-exotico{
+    margin-bottom: 0;
+    margin-top: 17px;
+    transition: 700ms ease;
+  }
+  .card:hover .ver-mas{
+    color: black;
+    transition: 700ms ease;
+  }
+  a{
+    text-decoration: none;
+  }
+  .enlace:visited{
+    text-decoration: none;
+    color: inherit;
+  }
+
+@media (max-width: 992px){
+  .div-padre {
+    display: flex;
+    justify-content: center;
+  }
+}
+.ver-mas {
+  background: linear-gradient(45deg, #2196F3, #00BCD4);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+  z-index: 1;
+}
+
+.ver-mas:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00BCD4, #2196F3);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.ver-mas:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+}
+
+.ver-mas:hover:before {
+  left: 0;
+}
+
+.ver-mas:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}

@@ -1,0 +1,59 @@
+<app-header />
+@if(cargando){
+  <app-loader></app-loader>
+}
+@if(!cargando){
+<div class="row contenedor-rios">
+    @for (rio of todosRios; track rio.id) {
+        <div class="tarjetas-rio col-lg-4">
+            <a (click)="abrirModal(rio)" data-bs-toggle="modal" data-bs-target="#modalAgregarPeces">
+                <app-tarjeta-rios nombre="{{rio.nombre}}" descripcion="{{rio.descripcion}}" imagen="{{rio.imagen}}" />
+            </a>
+        </div>
+    }
+</div>
+<app-footer />
+
+<!--Hacer componente modal-->
+<div class="modal fade" id="modalAgregarPeces" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <!-- Cabecera del modal con efecto de gradiente -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloModalRio"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            
+          </button>
+        </div>
+        
+        <!-- Cuerpo del modal con diseño mejorado -->
+         @if(rioSeleccionado) {
+          <div class="modal-body">
+            <div class="contenedor-principal">
+              <!-- Contenedor de imagen con efecto de sombra y bordes redondeados -->
+              <div class="contenedor-imagen" id="imagenModalRio">
+                <div class="imagen-overlay">
+                  <img src="{{rioSeleccionado.imagen}}" alt="{{rioSeleccionado.nombre}}">
+                </div>
+              </div>
+              
+              <!-- Contenedor de descripción con estilo mejorado -->
+              <div class="contenedor-descripcion" id="descripcionModalRio">
+                <h4 class="titulo-descripcion">Descripción</h4>
+                <div class="linea-divisora"></div>
+                <p class="texto-descripcion">
+                  {{rioSeleccionado.descripcion}}
+                </p>
+                <!-- Botón con efecto hover -->
+                <button class="btn-ver-peces" (click)="navegarAPeces(rioSeleccionado.id, rioSeleccionado.pezid)">
+                  <span class="texto-boton">Ver Peces</span>
+                  <span class="icono-boton">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+         }
+      </div>
+    </div>
+  </div>
+}

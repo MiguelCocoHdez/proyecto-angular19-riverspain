@@ -1,0 +1,49 @@
+p {
+    color: white;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.tarjeta-batida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-batidas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+
+  .no-batidas-mensaje {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    color: #333;
+    background-color: #f8f9fa;
+    border-left: 5px solid #0072ff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+  }
+  
+
+  @media (max-width: 768px) {
+    .no-batidas-mensaje {
+      font-size: 1.3rem;
+      padding: 1.2rem 2rem;
+    }
+  }

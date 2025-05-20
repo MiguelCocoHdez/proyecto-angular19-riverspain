@@ -1,0 +1,30 @@
+<section>
+  <div class="container-fluid row">
+    <div class="texto-explicativo col-lg-6 col-md-12 col-sm-12"
+      data-aos="fade-right" data-aos-duration="1500"
+    >
+        <h2><strong>Bienvenido a tu espacio personal</strong></h2>
+        <p>
+          Aquí encontrarás tu tarjeta de voluntario personalizada. <br>
+          ¡Gracias por formar parte de nuestra comunidad y por tu compromiso!
+        </p>
+    </div>
+        <div class="tarjeta-voluntario col-lg-6 col-md-12 col-sm-12"
+            data-aos="zoom-in" data-aos-duration="1500"
+        >
+            <div class="card">
+                <div class="card__info">
+                    <div class="card__logo">Tarjeta de voluntario</div>
+                    <div class="card__type">Numero de voluntario</div>
+                    <div class="card__number">
+                        <span class="card__digit-group">{{numeroVoluntario}}</span>
+                    </div>
+                    <div class="card__valid-thru" aria-label="Valid thru">Fecha<br>Voluntario</div>
+                    <div class="card__exp-date"><p>{{voluntario?.fechacreacion | date:'dd/MM/yyyy'}}</p></div>
+                    <div class="card__name" aria-label="Dee Stroyer">{{voluntario?.nombre}} {{voluntario?.apellidos}}</div>
+                    <div class="card__texture"></div>
+                </div>
+             </div>
+        </div>
+      </div>
+</section>

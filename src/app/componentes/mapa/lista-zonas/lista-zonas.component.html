@@ -1,0 +1,11 @@
+<div class="titulo-zonas">
+    <h1 class="titulo-zonas-mensaje">Zonas Disponibles</h1>
+</div>
+<div class="tarjetas-zona">
+    @for (zona of zonas; track zona) {
+        <app-tarjeta-zona 
+        [nombreZona]="zona.nombre"
+        [zona]="zona"
+        />
+    }
+</div>
