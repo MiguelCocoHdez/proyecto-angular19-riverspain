@@ -21,7 +21,7 @@ El proyecto implementa operaciones CRUD y otras funcionalidades más complejas m
 - **Angular CLI**: Herramienta para la generación, gestión y automatización de tareas del proyecto.
 - **RxJS**: Biblioteca para manejar flujos de datos asíncronos en la comunicación con la API.
 - **HttpClient**: Módulo de Angular para realizar peticiones HTTP a la API de microservicios.
-- **Bootstrap/TailwindCSS** (ajusta según el framework CSS utilizado): Para estilos modernos y diseño responsivo.
+- **Bootstrap**: Para estilos modernos y diseño responsivo.
 
 ## Requisitos previos
 
