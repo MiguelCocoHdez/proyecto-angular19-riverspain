@@ -11,7 +11,6 @@ El proyecto implementa operaciones CRUD y otras funcionalidades más complejas m
 - **Componentes Standalone**: Arquitectura modular basada en componentes independientes para una mayor flexibilidad y reutilización.
 - **Lazy Loading**: Carga diferida de módulos para optimizar el rendimiento y reducir el tiempo de carga inicial.
 - **Integración con API REST**: Consumo de la API de microservicios [RiverSpain Microservices](https://github.com/MiguelCocoHdez/proyecto-microservicios-riverspain) para operaciones CRUD (crear, leer, actualizar y eliminar datos).
-- **Internacionalización (i18n)**: Soporte para múltiples idiomas, facilitando la accesibilidad global.
 - **Diseño Responsivo**: Interfaz adaptable a dispositivos móviles, tabletas y escritorios para una experiencia de usuario consistente.
 
 ## Tecnologías utilizadas
