@@ -4,7 +4,7 @@
 
 RiverSpain es una aplicación web frontend desarrollada con **Angular 19**, diseñada para interactuar con la API de microservicios del proyecto [RiverSpain Microservices](https://github.com/MiguelCocoHdez/proyecto-microservicios-riverspain). La aplicación permite visualizar y gestionar datos relacionados con los ríos de España, ofreciendo una experiencia de usuario interactiva, moderna y eficiente. Aprovecha las capacidades avanzadas de Angular 19, como componentes standalone, lazy loading etc, para garantizar un rendimiento óptimo y una arquitectura modular y escalable.
 
-El proyecto implementa operaciones CRUD y otras funcionalidades más complejas mediante la integración con la API REST proporcionada por el repositorio de microservicios, sigue las mejores prácticas de desarrollo frontend e incluye soporte para internacionalización (i18n) y un diseño responsivo que se adapta a diferentes dispositivos.
+El proyecto implementa operaciones CRUD y otras funcionalidades más complejas mediante la integración con la API REST proporcionada por el repositorio de microservicios, sigue las mejores prácticas de desarrollo frontend e incluye un diseño responsivo que se adapta a diferentes dispositivos.
 
 ## Características principales
 
